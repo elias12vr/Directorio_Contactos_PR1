@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@mipmap/background"> <!-- Usar un color de fondo más suave -->
+
+    <!-- Título de la interfaz -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro de Contactos"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold" />
+
+    <!-- Imagen del usuario -->
+    <ImageButton
+        android:id="@+id/ivUserImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:src="@mipmap/nouser"
+        android:adjustViewBounds="true"
+        android:contentDescription="Imagen del usuario"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circular_border"
+        android:padding="4dp" />
+
+    <!-- Campo Nombre -->
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:padding="14dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#333333"
+        android:textColorHint="#757575"
+        android:background="@drawable/edit_text_bg" /> <!-- Fondo más estilizado -->
+
+    <!-- Campo Teléfono -->
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Teléfono"
+        android:inputType="phone"
+        android:padding="14dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#333333"
+        android:textColorHint="#757575"
+        android:background="@drawable/edit_text_bg" />
+
+    <!-- Campo Correo -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo"
+        android:padding="14dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#333333"
+        android:textColorHint="#757575"
+        android:background="@drawable/edit_text_bg" />
+
+    <!-- Botón Guardar Contacto con imagen y texto -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+        <ImageButton
+            android:id="@+id/btnGuardarContacto"
+            android:src="@drawable/guardar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Guardar Contacto"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar Contacto"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Botón Mostrar Contactos con imagen y texto -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+        <ImageButton
+            android:id="@+id/btnRegistro"
+            android:src="@drawable/consultar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Mostrar Contactos"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Contactos"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Botón Editar con imagen y texto -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+        <ImageButton
+            android:id="@+id/btnEditar"
+            android:src="@drawable/editar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Editar Información"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar Información"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- Botón Eliminar con imagen y texto -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+        <ImageButton
+            android:id="@+id/btnEliminar"
+            android:src="@drawable/eliminar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Eliminar Contacto"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Contacto"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>
